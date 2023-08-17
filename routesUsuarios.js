@@ -8,19 +8,17 @@ db.sync();
 
 //GET Retorna dados de usuarios 
 router.get('/', async (req, res) => {
-    const {page = 1 , limit = 10} = req.query;
     try {
-        const [results, metadata] = await db.query(
-            `SELECT * FROM usuarios ORDER BY updatedAt DESC LIMIT :limit OFFSET :offset`,
+        const results = await db.query(
+            `SELECT * FROM usuarios ORDER BY updatedAt DESC`,
             { 
-                replacements: { limit: limit, offset: (page - 1) * limit },
                 type: db.QueryTypes.SELECT
             }
         );
         res.json(results);
     } catch (error) {
         res.status(500).json({
-            sucess: false,
+            success: false,
             message: error.message,
         });
     }
