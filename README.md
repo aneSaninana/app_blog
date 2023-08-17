@@ -12,12 +12,6 @@ Esta API permite a gestão de usuários e posts para um sistema de blog simples.
 ### **Base URL**
 
 
-
-
-
-
-
-
 ```
 http://localhost:8081/
 
@@ -135,7 +129,7 @@ http://localhost:8081/
 	"nome": "Francisco Souza",
 	"email": "antonia@example.com",
 	"createdAt": "2023-08-14T21:00:28.000Z",
-	"updatedAt" "2023-08-14T21:00:28.000Z"v
+	"updatedAt" "2023-08-14T21:00:28.000Z"
 }
 
 ```
@@ -217,7 +211,7 @@ http://localhost:8081/
 "updatedAt": "2023-08-14T21:09:20.000Z"
 
 }
-    ...
+
 ]
 
 ```
